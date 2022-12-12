@@ -1,7 +1,8 @@
-
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { PostsIndex } from "./PostsIndex";
+import { Modal } from "./Modal";
+
 
 export function Home() {
   const [posts, setPosts] = useState([]);
@@ -13,9 +14,13 @@ export function Home() {
     });
   }
   useEffect(handleIndexPosts, []);
+  
   return (
     <div>
-    < PostsIndex posts={posts}/>
+      < PostsIndex posts={posts}/>
+      <Modal show={true} >
+        <h1>Test</h1>
+      </Modal>
     </div>
   );
 }
