@@ -1,7 +1,7 @@
 import { Header } from "./Header";
 import { Home } from "./Home";
 import { Footer } from "./Footer";
-import { Stupidjs } from "./Stupidjs";
+
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Home />
       <Footer />
-      <Stupidjs />
+
     </div>
   )
 }
