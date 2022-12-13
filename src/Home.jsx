@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
+import { PostsShow } from "./PostsShow";
 
 
 export function Home() {
@@ -33,8 +34,8 @@ export function Home() {
   return (
     <div>
       < PostsIndex posts={posts} onShowPost={handleShowPost} />
-      <Modal show={true} >
-        <h1>Test</h1>
+      <Modal show={isPostsShowVisible} onClose={handleClose} >
+        <PostsShow post={currentPost} />
       </Modal>
     </div>
   );
