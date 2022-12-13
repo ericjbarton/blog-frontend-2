@@ -1,8 +1,7 @@
 export function PostsShow(props) {
   return (
     <div>
-      <h1>Post Info</h1>
-      <h3>Title: {props.post.title}</h3>
+      <h1>{props.post.title}</h1>
       <p>{props.post.body}</p>
     </div>
   );
