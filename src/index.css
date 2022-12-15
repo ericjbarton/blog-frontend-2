@@ -1,3 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+#root {
+  background-color: black;
+  font-family: fantasy;
+  color: rgb(18, 211, 237);
+  text-align: center;
+}
