@@ -7,7 +7,7 @@ export function Header() {
           <span className="navbar-toggler-icon"></span>
         </button> <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto"> <li className="nav-item active"> <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-          </li> <li className="nav-item"> <a className="nav-link" href="#">Features</a>
+          </li> <li className="nav-item"> <a className="nav-link" href="/#Signup">Signup</a>
           </li>  <li className="nav-item">
             <a className="nav-link" href="#">Yep!</a> </li> </ul> <span className="navbar-text">
       The World's Greatest Gobbledygook </span>

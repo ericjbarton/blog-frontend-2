@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
+import { Signup } from "./Signup";
 
 
 export function Home() {
