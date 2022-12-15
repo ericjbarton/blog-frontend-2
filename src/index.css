@@ -2,8 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 #root {
-  background-color: black;
+  /* background-color: black; */
   font-family: fantasy;
   color: rgb(18, 211, 237);
   text-align: center;
+  background-image: url("https://s3.amazonaws.com/noupe/2009/10/tileable-starfield.jpg");
+  /* background-position: center; */
+  background-size: 100%, 300%
 }
