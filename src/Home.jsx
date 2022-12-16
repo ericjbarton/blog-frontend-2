@@ -4,6 +4,7 @@ import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 
 export function Home() {
@@ -33,8 +34,9 @@ export function Home() {
   useEffect(handleIndexPosts, []);
   
   return (
-    <div className="container">
+    <div className="container" >
       <Signup />
+      <Login />
       < PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose} >
         <PostsShow post={currentPost} />
