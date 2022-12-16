@@ -13,6 +13,7 @@ export function PostsShow(props) {
   return (
     <div id="posts-show">
       <h1>{props.post.title}</h1>
+      <img src={props.post.image}></img>
       <p>{props.post.body}</p>
 
       <h1>Update Post</h1>
