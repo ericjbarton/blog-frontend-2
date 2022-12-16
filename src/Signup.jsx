@@ -13,7 +13,7 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
-        window.location.href = "/Modal"; 
+        window.location.href = "/"; 
       })
       .catch((error) => {
         console.log(error.response.data.errors);
@@ -38,16 +38,16 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          Name: <input type="text" />
+          Name: <input name="name" type="text" />
         </div>
         <div>
-          Email: <input type="email" />
+          Email: <input name="email" type="email" />
         </div>
         <div>
-          Password: <input type="password" />
+          Password: <input name="password" type="password" />
         </div>
         <div>
-          Password confirmation: <input type="password" />
+          Password confirmation: <input name="password_confirmation" type="password" />
         </div>
         <button type="submit">Signup</button>
       </form>
