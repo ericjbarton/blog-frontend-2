@@ -9,28 +9,19 @@ export function PostsNew(props) {
 
  
   return (
-    <div id="recipes-new">
-      <h1>New Recipe</h1>
+    <div id="posts-new">
+      <h1>New Post</h1>
       <form onSubmit={handleSubmit}>
     <div>
-      What it called?: <input name="title" type="text" />
+      Title: <input name="title" type="text" />
     </div>
     <div>
-      chef: <input name="chef" type="text" />
+      Gives us a verse, drop some knowledge: <input name="body" type="text" />
     </div>
     <div>
-      How long???: <input name="prep_time" type="text" />
+      Put in a picture: <input name="image" type="text" />
     </div>
-    <div>
-      What go in?: <input name="ingredients" type="text" />
-    </div>
-    <div>
-      directions: <input name="directions" type="text" />
-    </div>
-    <div>
-      Put in a picture: <input name="image_url" type="text" />
-    </div>
-    <button type="submit">Create recipe</button>
+    <button type="submit">Create post</button>
   </form>
 </div>
 );
