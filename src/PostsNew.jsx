@@ -12,17 +12,17 @@ export function PostsNew(props) {
     <div id="posts-new">
       <h1>New Post</h1>
       <form onSubmit={handleSubmit}>
-    <div>
+        <div>
       Title: <input name="title" type="text" />
-    </div>
-    <div>
+        </div>
+        <div>
       Gives us a verse, drop some knowledge: <input name="body" type="text" />
-    </div>
-    <div>
+        </div>
+        <div>
       Put in a picture: <input name="image" type="text" />
+        </div>
+        <button type="submit">Create post</button>
+      </form>
     </div>
-    <button type="submit">Create post</button>
-  </form>
-</div>
-);
+  );
 }
