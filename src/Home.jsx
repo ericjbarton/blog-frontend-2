@@ -33,7 +33,8 @@ export function Home() {
   useEffect(handleIndexPosts, []);
   
   return (
-    <div>
+    <div className="container">
+      <Signup />
       < PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose} >
         <PostsShow post={currentPost} />
