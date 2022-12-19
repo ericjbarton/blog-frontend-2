@@ -6,10 +6,16 @@ export function PostsShow(props) {
     const params = new FormData(event.target);
     axios.patch(`http://localhost:3000/posts/${props.post.id}.json`, params).then((response) => {
       console.log(response.data);
+      props.onUpdatePost( props.post.id, params);
       event.target.reset();
     });
   };
 
+  const handleClick = () => {
+    props.onPostDestroy(props.post);
+  };
+  
+  
   return (
     <div id="posts-show">
       <h1>{props.post.title}</h1>
@@ -28,6 +34,7 @@ export function PostsShow(props) {
       </div>
       <button type="submit">Update Post</button>
       </form>
+      <button onClick={handleClick}>Delete Post</button>
     </div>
   );  
 }

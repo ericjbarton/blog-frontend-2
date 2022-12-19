@@ -5,7 +5,8 @@ import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import { PostsNew } from "./PostsNew"
+import { PostsNew } from "./PostsNew";
+
 
 
 export function Home() {
@@ -38,7 +39,29 @@ export function Home() {
     });
   };
 
+  const handleUpdatePost = (id, params) => {
+    axios.patch(`http://localhost:3000/posts/${id}.json`, params).then((response) => {
+      setPosts(
+        posts.map((post) => {
+          if (post.id === response.data.id) {
+            return response.data; 
+          } else {
+            return post;
+          }
+        }
+        )
+      );
+      handleClose()
+    });
+  };
+
   useEffect(handleIndexPosts, []);
+
+  const handleDestroyPost = (post) => { axios.delete(`http://localhost:3000/posts/${post.id}.json`).then(response => {
+    setPosts(posts.filter((p) => p.id !== post.id));
+    handleClose();
+    });
+  }
   
   return (
     <div className="container" >
@@ -47,7 +70,7 @@ export function Home() {
       < PostsIndex posts={posts} onShowPost={handleShowPost} />
       < PostsNew onCreatePost={handleCreatePost} />
       <Modal show={isPostsShowVisible} onClose={handleClose} >
-        <PostsShow post={currentPost} />
+        <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onPostDestroy={handleDestroyPost} />
       </Modal>
     </div>
   );
