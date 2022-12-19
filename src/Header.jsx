@@ -22,6 +22,7 @@ export function Header() {
         </button> 
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/login">Log in</Link>
       </nav>
       </div>
       <br></br>

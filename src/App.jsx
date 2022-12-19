@@ -4,6 +4,8 @@ import { Footer } from "./Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Snowfall from 'react-snowfall'
+import { About } from "./About";
+import { Login } from "./Login";
 
 
 function App() {
@@ -13,8 +15,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={< Home />} />
+          <Route path="/about" element={< About />} />
+          <Route path="/login" element= {<Login />} />
         </Routes>
-        <Home />
+      
         <Footer />
       </div>
       <div>
@@ -30,7 +34,7 @@ function App() {
   </div>,
   document.querySelector('#app'),
 )</div>
-    </BrowserRouter>
+  </BrowserRouter>
   );
 }
 
