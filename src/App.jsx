@@ -24,7 +24,7 @@ function App() {
         <Footer />
       </div>
       <div>
-        ReactDOM.render(
+        (
   <div style={{ height: 400, width: 400, background: "transparent", position: 'relative' }}>
   <Snowfall
   style={{
@@ -34,7 +34,7 @@ function App() {
   }}
 />
   </div>,
-  document.querySelector('#app'),
+
 )</div>
   </BrowserRouter>
   );
