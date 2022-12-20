@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import Snowfall from 'react-snowfall'
 import { About } from "./About";
 import { Login } from "./Login";
+import { Signup } from "./Signup";
 
 
 function App() {
@@ -17,13 +18,14 @@ function App() {
           <Route path="/" element={< Home />} />
           <Route path="/about" element={< About />} />
           <Route path="/login" element= {<Login />} />
+          <Route path="/signup" element= {<Signup />} />
         </Routes>
       
         <Footer />
       </div>
       <div>
         ReactDOM.render(
-  <div style={{ height: 400, width: 400, background: '#282c34', position: 'relative' }}>
+  <div style={{ height: 400, width: 400, background: "transparent", position: 'relative' }}>
   <Snowfall
   style={{
     position: 'fixed',
