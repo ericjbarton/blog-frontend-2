@@ -4,6 +4,7 @@ import { useState } from "react";
 export function Signup() {
   const [errors, setErrors] = useState([]);
   const [name, setName] = useState("");
+  const [status, setStatus] = useState(undefined);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,21 +18,16 @@ export function Signup() {
         window.location.href = "/"; 
       })
       .catch((error) => {
+        setStatus(error.response.status);
         console.log(error.response.data.errors);
         setErrors(error.response.data.errors);
       });
   };
 
-
-
-
-
-
-
-
   return (
     <div id="signup">
       <h1>Signup</h1>
+      { status ?  <img src={`https://http.cat/${status}`} alt="" /> : null}
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
@@ -39,17 +35,17 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          Name: <input name="form-control" value={name} onChange={(event) => setName(event.target.value)} type="text" />
+          Name: <input className="form-control" value={name} onChange={(event) => setName(event.target.value)} name="name" type="text" />
         </div>
         <small>{20 - name.length} characters remaining</small>
         <div>
-          Email: <input name="email" type="email" />
+          Email: <input className="form-control" name="email" type="email" />
         </div>
         <div>
-          Password: <input name="password" type="password" />
+          Password: <input className="form-control" name="password" type="password" />
         </div>
         <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+          Password confirmation: <input className="form-control" name="password_confirmation" type="password" />
         </div>
         <button type="submit">Signup</button>
       </form>

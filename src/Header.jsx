@@ -1,16 +1,22 @@
+import axios from "axios";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 export function Header() {
   const [isSignupVisible, setIsSignupVisible] = useState(false);
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
 
   const handleSignupShow = () => {
     setIsSignupVisible(true);
 
-    const handleSignupClose = () => { setIsSignupVisible(false) }
+    const handleSignupClose = () => { setIsSignupVisible(false);
+    };
+  
+
   };
   return (
 

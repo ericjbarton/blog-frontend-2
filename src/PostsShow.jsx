@@ -1,14 +1,11 @@
-import axios from "axios"
+import axios from "axios";
 
 export function PostsShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    axios.patch(`http://localhost:3000/posts/${props.post.id}.json`, params).then((response) => {
-      console.log(response.data);
-      props.onUpdatePost( props.post.id, params);
-      event.target.reset();
-    });
+    props.onUpdatePost( props.post.id, params);
+    event.target.reset();
   };
 
   const handleClick = () => {
@@ -19,7 +16,7 @@ export function PostsShow(props) {
   return (
     <div id="posts-show">
       <h1>{props.post.title}</h1>
-      <img src={props.post.image}></img>
+      <img src={props.post.image} width="200rem"></img>
       <p>{props.post.body}</p>
 
       <h1>Update Post</h1>
