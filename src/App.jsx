@@ -25,18 +25,18 @@ function App() {
       </div>
       <div>
         (
-  <div style={{ height: 400, width: 400, background: "transparent", position: 'relative' }}>
-  <Snowfall
-  style={{
-    position: 'fixed',
-    width: '100vw',
-    height: '100vh',
-  }}
-/>
-  </div>,
+        <div style={{ height: 400, width: 400, background: "transparent", position: 'relative' }}>
+          <Snowfall
+            style={{
+              position: 'fixed',
+              width: '100vw',
+              height: '100vh',
+            }}
+          />
+        </div>,
 
 )</div>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
