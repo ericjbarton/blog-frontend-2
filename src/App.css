@@ -1,1 +1,11 @@
-
+#root {
+  max-width: 100%rem;
+  max-height: 100%rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+.card {
+  padding: 2em;
+  align-content:flex-start;
+}
