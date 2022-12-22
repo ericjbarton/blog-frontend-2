@@ -12,12 +12,27 @@ export function Header() {
 
   const handleSignupShow = () => {
     setIsSignupVisible(true);
-
-    const handleSignupClose = () => { setIsSignupVisible(false);
-    };
-  
-
   };
+
+  const handleSignupClose = () => { setIsSignupVisible(false);
+  };
+
+  const handleLoginShow = () => {
+    setIsLoginVisible(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginVisible(false);
+  };
+
+  const handleLogout = (event) => {
+    event.preventDefault();
+    delete axios.defaults.headers.common["Authorization"];
+    localStorage.removeItem("jwt");
+    window.location.href = "/";
+  };
+  
+  
   return (
 
     <header>
@@ -28,11 +43,19 @@ export function Header() {
         </button> 
         <Link to="/">Home</Link>&nbsp;&nbsp;&nbsp;
         <Link to="/about">About</Link>&nbsp;&nbsp;&nbsp;
-
-        <Link to="/login">Login</Link>
-        &nbsp;&nbsp;&nbsp;
-        <Link to="/signup">Signup</Link>
+        {localStorage.jwt === undefined ?
+          <>
+            <li className="nav-item"><a onClick={handleLoginShow} href="#"> Login</a></li>
+        &nbsp;&nbsp;&nbsp; <li className="nav-item"><a onClick={handleSignupShow} href="#">Signup</a>
+            </li>
+          </> :
+          <li className="nav-item"><a onClick={handleLogout} href="#">Logout</a>
+          </li>
+        }
       </nav>
+      <Modal show={isSignupVisible} onClose={handleSignupClose}> < Signup /> </Modal>
+
+      <Modal show={isLoginVisible} onCLose={handleLoginClose}>< Login /></Modal>
       </div>
       <br></br>
     </header>

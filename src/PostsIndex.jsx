@@ -15,7 +15,7 @@ export function PostsIndex(props) {
                   <h2 className="card-title">{post.title}</h2>
                
                   <br />
-                  <button onClick={() => props.onShowPost(post)}>MORE INFO</button>
+                  <button onClick={() => props.onShowPost(post)}>Read it!</button>
                   <br />
                 </div>
               </div>

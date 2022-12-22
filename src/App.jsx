@@ -3,7 +3,7 @@ import { Home } from "./Home";
 import { Footer } from "./Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom';
-import Snowfall from 'react-snowfall'
+import Snowfall from 'react-snowfall';
 import { About } from "./About";
 import { Login } from "./Login";
 import { Signup } from "./Signup";
