@@ -27,7 +27,7 @@ export function Signup() {
   return (
     <div id="signup">
       <h1>Signup</h1>
-      { status ?  <img src={`https://http.cat/${status}`} alt="" /> : null}
+      { status ?  <img src={`https://http.cat/${status}`} width="200px" alt="" /> : null}
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
